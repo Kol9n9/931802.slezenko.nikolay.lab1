@@ -1,0 +1,10 @@
+﻿@using Lab1.Models
+@{
+    ViewBag.Title = "PassUsingViewBag - Backend1";
+}
+<h1>PassUsingViewBag</h1>
+<b>Rand Value First:</b> @ViewBag.FirstValue<br />
+<b>Rand Value Second:</b> @ViewBag.SecondValue<br />
+@foreach(var result in (List<CalcResult>)ViewBag.CalcResults){
+    <b>@result.Name :</b><br />@result.Print()<br />
+}

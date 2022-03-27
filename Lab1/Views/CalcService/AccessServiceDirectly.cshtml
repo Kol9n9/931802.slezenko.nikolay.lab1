@@ -1,0 +1,13 @@
+﻿@using Lab1.Services
+@using Lab1.Models
+@inject CalcService Service
+@{
+    ViewBag.Title = "AccessServiceDirectly - Backend1";
+    var model = Service.GetCalcModel();
+}
+<h1>AccessServiceDirectly</h1>
+<b>Rand Value First:</b> @(model.FirstValue)<br />
+<b>Rand Value Second:</b> @(model.SecondValue)<br />
+@foreach(var result in (List<CalcResult>)model.CalcResults){
+    <b>@result.Name :</b><br />@result.Print()<br />
+}

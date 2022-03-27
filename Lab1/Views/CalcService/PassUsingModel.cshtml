@@ -1,0 +1,10 @@
+﻿@model Lab1.Models.WebCalcModel
+@{
+    ViewBag.Title = "PassUsingModel - Backend1";
+}
+<h1>PassUsingModel</h1>
+<b>Rand Value First:</b> @Model.FirstValue<br />
+<b>Rand Value Second:</b> @Model.SecondValue<br />
+@foreach(var result in Model.CalcResults){
+    <b>@result.Name :</b><br />@result.Print()<br />
+}
